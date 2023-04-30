@@ -17,7 +17,10 @@ function ProjectModal({ open, onClose, children }) {
           open ? 'scale-100 opacity-100' : 'scale-125 opacity-0'
         }`}
       >
-        <button onClick={onClose} className="absolute top-0 p-2 text-2xl font-bold text-gray-300 transition-colors rounded-lg right-2 hover:text-gray-600">
+        <button
+          onClick={onClose}
+          className="absolute top-0 p-2 text-2xl font-bold text-gray-300 transition-colors rounded-lg right-2 hover:text-gray-600"
+        >
           x
         </button>{' '}
       </div>

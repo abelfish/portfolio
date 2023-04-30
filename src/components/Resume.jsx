@@ -23,7 +23,7 @@ function Resume() {
                 <Timeline.Point icon={HiCalendar} />
                 <Timeline.Content>
                   <Timeline.Time>December 2019 - February 2022</Timeline.Time>
-                  <Timeline.Title>Software Engineer</Timeline.Title>
+                  <Timeline.Title className='dark:text-dark'>Software Engineer</Timeline.Title>
                   <Timeline.Body>
                     I was responsible for designing and developing software
                     solutions for various clients across industries. I have
@@ -49,7 +49,7 @@ function Resume() {
                 <Timeline.Point icon={HiCalendar} />
                 <Timeline.Content>
                   <Timeline.Time>September 2016 - July 2019</Timeline.Time>
-                  <Timeline.Title>Junior Java Developer</Timeline.Title>
+                  <Timeline.Title className='dark:text-dark'>Junior Java Developer</Timeline.Title>
                   <Timeline.Body>
                   Throughout my time at the company, I consistently demonstrated my ability to meet project deadlines and work collaboratively with colleagues across multiple departments. I maintained up-to-date knowledge of the latest Java development tools and techniques, and I actively sought out opportunities to apply new technologies and improve existing processes.
                   </Timeline.Body>
@@ -70,7 +70,7 @@ function Resume() {
                 <Timeline.Point icon={HiCalendar} />
                 <Timeline.Content>
                   <Timeline.Time>August 2022 - Present</Timeline.Time>
-                  <Timeline.Title>
+                  <Timeline.Title className='dark:text-dark'>
                     Master's Degree in Computer Science
                   </Timeline.Title>
                   <Timeline.Body>
@@ -88,7 +88,7 @@ function Resume() {
                 <Timeline.Point icon={HiCalendar} />
                 <Timeline.Content>
                   <Timeline.Time>September 2011 - July 2016</Timeline.Time>
-                  <Timeline.Title>
+                  <Timeline.Title className='dark:text-dark'>
                     Bachelor's Degree in Computer Science
                   </Timeline.Title>
                   <Timeline.Body>

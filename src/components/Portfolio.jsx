@@ -3,7 +3,6 @@ import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import img from '../assets/images/Untitled.png';
 
-
 function Portfolio() {
   return (
     <div
@@ -11,13 +10,13 @@ function Portfolio() {
       className="w-3/4 mx-auto mb-20 mt-28 lg:grid lg:grid-cols-2 scroll-m-56 md:mb-20 lg:mt-52 lg:mb-36 "
     >
       <div className="mx-auto ">
-        <h1 className="mb-4 text-5xl font-extrabold tracking-wide text-transparent font-kanit bg-clip-text bg-gradient-to-r from-secondary to-fuchsia-800 dark:text-white lg:text-7xl ">
+        <h1 className="mb-4 text-5xl font-extrabold tracking-wide text-transparent font-kanit bg-clip-text bg-gradient-to-r from-secondary to-fuchsia-800 lg:text-7xl ">
           <span className="block text-transparent bg-clip-text bg-gradient-to-r to-purple-900 from-secondary">
             Hi! I am
           </span>{' '}
           Abel Kifletsion.
         </h1>
-        <p className="text-lg font-normal text-gray-500 lg:w-5/6 lg:text-xl dark:text-gray-400">
+        <p className="text-lg font-normal text-gray-500 lg:w-5/6 lg:text-xl">
           I am Proficient in building scalable and efficient RESTful APIs using
           SpringBoot, deploying applications using containerization technologies
           like Docker and Kubernetes, and creating interactive UI using

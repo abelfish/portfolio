@@ -43,6 +43,7 @@ function Projects() {
                 infinite={true}
                 centerMode={true}
                 autoPlay={true}
+                autoPlaySpeed={2000}
               >
                 <div className="mx-2 cursor-pointer" onClick={openModal}>
                   <img
