@@ -39,7 +39,7 @@ function Portfolio() {
       </div>
 
       <div className="mx-auto mt-10 right-52 lg:mt-0">
-        <img src={img} width={900} alt="" />
+        <img src="" width={900} alt="" />
       </div>
     </div>
   );
