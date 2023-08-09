@@ -1,12 +1,14 @@
 import React from 'react';
-import 'react-multi-carousel/lib/styles.css';
 import Carousel from 'react-multi-carousel';
-import ProjectModal from './ProjectModal';
-import website1 from '../assets/images/project-img2.png';
-import website2 from '../assets/images/project-img1.png';
-import website3 from '../assets/images/project-img3.png';
-import website4 from '../assets/images/website4.png';
+import 'react-multi-carousel/lib/styles.css';
+import bank from '../assets/images/bank.png';
 import colorSharp from '../assets/images/color-sharp2.png';
+import hotel from '../assets/images/hotel.png';
+import jobs from '../assets/images/job.png';
+import library from '../assets/images/library.png';
+import notes from '../assets/images/notes.jpg';
+import parts from '../assets/images/parts.jpg';
+import ProjectModal from './ProjectModal';
 function Projects() {
   const responsive = {
     superLargeDesktop: {
@@ -45,9 +47,10 @@ function Projects() {
                 autoPlay={true}
                 autoPlaySpeed={2000}
               >
-                <div className="mx-2 cursor-pointer" onClick={openModal}>
+                <a href="https://github.com/abelfish/Simple-Note-Taking-App-public.git">
+                <div className="mx-2 cursor-pointer">
                   <img
-                    src={website1}
+                    src={notes}
                     className="shadow-2xl rounded-2xl "
                     width={500}
                     height={300}
@@ -57,11 +60,12 @@ function Projects() {
                     Simple Note Taking App
                   </h3>
                 </div>
+                </a>
 
-                <a href="">
+                <a href="https://github.com/abelfish/alumni-management.git">
                   <div className="mx-2">
                     <img
-                      src={website2}
+                      src={jobs}
                       className="shadow-2xl rounded-2xl "
                       width={500}
                       height={300}
@@ -72,10 +76,10 @@ function Projects() {
                     </h3>
                   </div>
                 </a>
-                <a href="">
+                <a href="https://www.github.com/abelfish">
                   <div className="mx-2">
                     <img
-                      src={website3}
+                      src={library}
                       className="shadow-2xl rounded-2xl "
                       width={500}
                       height={300}
@@ -86,10 +90,10 @@ function Projects() {
                     </h3>
                   </div>
                 </a>
-                <a href="">
+                <a href="https://www.github.com/abelfish">
                   <div className="mx-2">
                     <img
-                      src={website4}
+                      src={parts}
                       className="shadow-2xl rounded-2xl "
                       width={500}
                       height={300}
@@ -100,10 +104,10 @@ function Projects() {
                     </h3>
                   </div>
                 </a>
-                <a href="">
+                <a href="https://www.github.com/abelfish">
                   <div className="mx-2">
                     <img
-                      src={website4}
+                      src={hotel}
                       className="shadow-2xl rounded-2xl "
                       width={500}
                       height={300}
@@ -114,10 +118,10 @@ function Projects() {
                     </h3>
                   </div>
                 </a>
-                <a href="">
+                <a href="https://github.com/abelfish/Natna-Bank-Project.git">
                   <div className="mx-2">
                     <img
-                      src={website4}
+                      src={bank}
                       className="shadow-2xl rounded-2xl "
                       width={500}
                       height={300}
@@ -138,7 +142,9 @@ function Projects() {
           alt="color-sharp"
         />
       </div>
-      <ProjectModal open={open} onClose={() => setOpen(false)}></ProjectModal>
+      <ProjectModal open={open} onClose={() => setOpen(false)}>
+        
+      </ProjectModal>
     </section>
   );
 }

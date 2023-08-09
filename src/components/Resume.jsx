@@ -25,33 +25,25 @@ function Resume() {
                   <Timeline.Time>December 2019 - February 2022</Timeline.Time>
                   <Timeline.Title className='dark:text-dark'>Software Engineer</Timeline.Title>
                   <Timeline.Body>
-                    I was responsible for designing and developing software
-                    solutions for various clients across industries. I have
-                    expertise in using a wide range of technologies, including
-                    Spring Boot, Docker, AWS EC2, S3, React, Angular, MongoDB,
-                    Redis, and Elasticsearch.
-                    <span className="pt=10">
+                  Designed and developed software solutions for various clients. During my time there, I used several technologies including Spring Boot, Docker, React, Angular, and MongoDB. I played a key role in developing highly scalable and performant web applications using Spring Boot and Docker. Gained Experience in using Spring Data main modules like Hibernate, JPA, REST, and Elastic search.	I oversaw the migration of over 5 monolithic large-scale applications to cloud-hosted microservices using Spring Boot and Rest APIs.
+
+                    <span className="pt-10">
                       
                     </span>
                   </Timeline.Body>
                   <Timeline.Body>
-                  I oversaw migration of many monolithic applications to
-                      cloud-hosted microservices using Spring Boot and Rest
-                      APIs. In addition to frontend and backend development, I
-                      have experience in working with various databases such as
-                      MongoDB, Redis, and Elasticsearch. I have expertise in
-                      designing and optimizing database schemas to ensure
-                      maximum performance and scalability.
+                  Gained Experience in AWS services such as EC2. S3, RDS, VPC. Additionally, I worked with various databases such as MongoDB, Redis, and Elasticsearch. Implemented test-driven design (TDD) in SDLC and improved the time needed for development and testing by 48%. Also reduced long-term costs by more than 60%.
                   </Timeline.Body>
                 </Timeline.Content>
               </Timeline.Item>
               <Timeline.Item>
                 <Timeline.Point icon={HiCalendar} />
                 <Timeline.Content>
-                  <Timeline.Time>September 2016 - July 2019</Timeline.Time>
-                  <Timeline.Title className='dark:text-dark'>Junior Java Developer</Timeline.Title>
+                  <Timeline.Time>September 2015 - July 2019</Timeline.Time>
+                  <Timeline.Title className='dark:text-dark'>Java Developer</Timeline.Title>
                   <Timeline.Body>
-                  Throughout my time at the company, I consistently demonstrated my ability to meet project deadlines and work collaboratively with colleagues across multiple departments. I maintained up-to-date knowledge of the latest Java development tools and techniques, and I actively sought out opportunities to apply new technologies and improve existing processes.
+                  As a developer for the import/export company, participated in multiple simultaneous projects of diverse complexity. During my time there, I directly impacted the marginal profits of the company, which rose 24% each year. Also Mentored 21 new recruits over the period of 3 years.
+
                   </Timeline.Body>
                   <Timeline.Body>
                   One of my main projects was the development of an application that streamlined the import/export process, allowing the company to manage shipments, inventory, and customs clearance more efficiently.
@@ -69,7 +61,7 @@ function Resume() {
               <Timeline.Item>
                 <Timeline.Point icon={HiCalendar} />
                 <Timeline.Content>
-                  <Timeline.Time>August 2022 - Present</Timeline.Time>
+                  <Timeline.Time>August 2022 - December 2023</Timeline.Time>
                   <Timeline.Title className='dark:text-dark'>
                     Master's Degree in Computer Science
                   </Timeline.Title>
@@ -106,10 +98,10 @@ function Resume() {
       </div>
       <div>
         <a
-          href=""
+          href="https://1drv.ms/w/s!ArI_vFNBfyKSoIsi-S7m99-1yjDgOw?e=dguzfz"
           className="w-56 px-5 py-3 mr-5 font-semibold text-center text-white border-2 text drop-shadow-2xl border-secondary bg-secondary hover:bg-red-600 hover:border-red-600"
         >
-          Download Resume
+          Open Resume
         </a>
       </div>
     </div>
