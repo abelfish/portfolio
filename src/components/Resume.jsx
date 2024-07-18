@@ -19,6 +19,19 @@ function Resume() {
               <h1 className="text-3xl font-bold font-Inter">Work Experience</h1>
             </div>
             <Timeline className="px-5 mt-8 lg:mt-16 lg:mr-20">
+            <Timeline.Item>
+                <Timeline.Point icon={HiCalendar} />
+                <Timeline.Content>
+                  <Timeline.Time>September 2023 - February 2024</Timeline.Time>
+                  <Timeline.Title className='dark:text-dark'>Software Engineer</Timeline.Title>
+                  <Timeline.Body>
+                    Used Kotlin extensively to implement clean code, developing spring boot microservices and multi-layered architectures. Implemented asynchronous non-blocking code using co-routines. Provided over 90% code coverage on implementations. Improved latency of API endpoints by using active Redis clusters. Worked across primary and away teams to integrate and streamline the incorporation to existing services such as Order Management and Checkout steps. Implemented, documented, and tested the logic to evaluate loyalty program promotions within the core promotions engine. 
+                    <span className="pt-10">
+                      
+                    </span>
+                  </Timeline.Body>
+                </Timeline.Content>
+              </Timeline.Item>
               <Timeline.Item>
                 <Timeline.Point icon={HiCalendar} />
                 <Timeline.Content>
