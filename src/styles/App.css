@@ -2,18 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 
+  It's generally better to use Tailwind's utility classes directly 
+  in JSX (e.g., bg-tertiary, dark:bg-primary) instead of these overrides.
+  However, adapting existing styles for dark mode.
+*/
 
-.bg-white {
-    background-color: #f4f0f1 !important;
+/* This was overriding .bg-white to be tertiary. Let's call it .bg-app-tertiary */
+.bg-app-tertiary {
+    background-color: #f4f0f1 !important; /* tertiary */
+}
+.dark .bg-app-tertiary {
+    background-color: #0b091e !important; /* dark */
 }
 
 .active {
-    color: #130f31 !important;
+    color: #130f31 !important; /* primary */
     font-weight: 700;
+}
+.dark .active {
+    /* Assuming active text should be prominent, secondary color might work well on dark bg */
+    /* Or use a light color like #f4f0f1 if secondary is too bright */
+    color: #e94536 !important; /* secondary */
 }
 
 .scrolled {
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+}
+.dark .scrolled {
+    box-shadow: 0 2px 6px 0 rgba(255, 255, 255, 0.1); /* Lighter shadow for dark backgrounds */
 }
 
 html {
@@ -22,18 +39,28 @@ html {
 }
 
 body {
-    color: #130f31;
+    color: #130f31; /* primary */
     font-weight: 400;
     overflow-x: hidden;
     position: relative;
-    background-color: #f4f0f1 !important;
-
+    background-color: #f4f0f1 !important; /* tertiary */
 } 
+
+.dark body {
+    color: #f4f0f1; /* tertiary (light) for text */
+    background-color: #0b091e !important; /* dark for body background */
+}
+
 nav {
-    background-color: #f4f0f1 !important;
+    /* This might be overridden by component-specific styles like in Header.jsx */
+    background-color: #f4f0f1 !important; /* tertiary */
     opacity: 0.95;
-
 } 
+
+.dark nav {
+    background-color: #0b091e !important; /* dark */
+}
+
 /* #home {
     background-image: url(../assets/images/profile-image.jpg);
     background-size: 60%;
