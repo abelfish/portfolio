@@ -1,9 +1,11 @@
 import { Button, Navbar } from 'flowbite-react';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { ThemeContext } from '../contexts/ThemeContext';
 import linkedin from '../assets/images/nav-icon1.svg';
 import github from '../assets/images/github.svg';
 
 function Header() {
+  const { theme, toggleTheme } = useContext(ThemeContext);
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
  
@@ -27,25 +29,31 @@ function Header() {
     setActiveLink(link);
   };
   const divStyle =
-    'fixed top-0 justify-center w-full px-5 pt-6 md:px-10 lg:px-10 z-50 bg-white bg-opacity-80';
+    'fixed top-0 justify-center w-full px-5 pt-6 md:px-10 lg:px-10 z-50 bg-white bg-opacity-80 dark:bg-dark dark:bg-opacity-80';
 
   return (
     <div className={scrolled ? 'scrolled ' + divStyle : divStyle}>
-      <Navbar className=" lg:max-w-screen-xl lg:mx-auto bg-opacity-80">
+      <Navbar className="lg:max-w-screen-xl lg:mx-auto bg-opacity-80 dark:bg-dark dark:bg-opacity-80">
         <Navbar.Brand href="" className="">
-          <h1 className="text-xl font-semibold lg:text-5xl font-kanit">
+          <h1 className="text-xl font-semibold lg:text-5xl font-kanit dark:text-white">
             Abel <span className="text-secondary font-inter">.</span>
           </h1>
         </Navbar.Brand>
 
-        <div className="flex md:order-2 ">
+        <div className="flex items-center md:order-2">
+          <button
+            onClick={toggleTheme}
+            className="p-1 mr-2 font-semibold border-2 lg:p-3 lg:text-xl border-secondary text-secondary hover:bg-secondary hover:text-white dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-secondary"
+          >
+            {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
+          </button>
           <a
             href="#contact"
-            className="p-1 font-semibold border-2 lg:p-3 lg:text-2xl border-secondary"
+            className="p-1 font-semibold border-2 lg:p-3 lg:text-2xl border-secondary text-secondary hover:bg-secondary hover:text-white dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-secondary"
           >
             Contact Me
           </a>
-          <Navbar.Toggle className="focus: ring-0" />
+          <Navbar.Toggle className="focus:ring-0 text-secondary dark:text-white" />
         </div>
 
         <Navbar.Collapse>
@@ -53,8 +61,8 @@ function Header() {
             href="#home"
             className={
               activeLink === 'home'
-                ? 'active lg:text-xl mr-5'
-                : 'lg:text-xl mr-5'
+                ? 'active lg:text-xl mr-5 text-secondary dark:text-secondary'
+                : 'lg:text-xl mr-5 text-primary dark:text-white'
             }
             onClick={() => updateActiveLink('home')}
           >
@@ -64,8 +72,8 @@ function Header() {
             href="#resume"
             className={
               activeLink === 'resume'
-                ? 'active lg:text-xl mr-5'
-                : 'lg:text-xl mr-5'
+                ? 'active lg:text-xl mr-5 text-secondary dark:text-secondary'
+                : 'lg:text-xl mr-5 text-primary dark:text-white'
             }
             onClick={() => updateActiveLink('resume')}
           >
@@ -75,8 +83,8 @@ function Header() {
             href="#skills"
             className={
               activeLink === 'skills'
-                ? 'active lg:text-xl mr-5'
-                : 'lg:text-xl mr-5'
+                ? 'active lg:text-xl mr-5 text-secondary dark:text-secondary'
+                : 'lg:text-xl mr-5 text-primary dark:text-white'
             }
             onClick={() => updateActiveLink('skills')}
           >
@@ -86,15 +94,15 @@ function Header() {
             href="#projects"
             className={
               activeLink === 'projects'
-                ? 'active lg:text-xl mr-5'
-                : 'lg:text-xl mr-5'
+                ? 'active lg:text-xl mr-5 text-secondary dark:text-secondary'
+                : 'lg:text-xl mr-5 text-primary dark:text-white'
             }
             onClick={() => updateActiveLink('projects')}
           >
             Projects
           </Navbar.Link>
 
-          <span className=" justify-normal">
+          <span className="justify-normal">
             <div className="flex justify-center gap-8 align-middle">
               <a href="https://www.linkedin.com/in/abelfkifle/" target="_blank">
                 {' '}
