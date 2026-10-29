@@ -10,7 +10,6 @@
   --muted: 88 86 112;
   --line: 222 220 232;
   --signal: 214 58 44;
-  --settled: 22 128 90;
   color-scheme: light;
 }
 
@@ -21,7 +20,6 @@
   --muted: 160 156 186;
   --line: 48 44 82;
   --signal: 240 98 84;
-  --settled: 74 196 146;
   color-scheme: dark;
 }
 
@@ -45,29 +43,6 @@ body {
   font-variant-numeric: tabular-nums;
 }
 
-/* Hero ledger: each state settles in sequence once on load */
-.ledger-step {
-  opacity: 0.25;
-  animation: settle 0.35s ease-out forwards;
-}
-.ledger-step .dot {
-  background: rgb(var(--line));
-  animation: dot 0.35s ease-out forwards;
-  animation-delay: inherit;
-}
-@keyframes settle {
-  to { opacity: 1; }
-}
-@keyframes dot {
-  to { background: rgb(var(--settled)); }
-}
-
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .ledger-step,
-  .ledger-step .dot {
-    animation: none;
-    opacity: 1;
-  }
-  .ledger-step .dot { background: rgb(var(--settled)); }
 }

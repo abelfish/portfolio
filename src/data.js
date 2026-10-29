@@ -19,16 +19,6 @@ export const profile = {
     'I build payments infrastructure and the products around it. I lead a suite of card, ACH and payout services on Kotlin, .NET and Google Cloud, and I’ve spent 8+ years shipping reliable, observable systems end to end.',
 };
 
-export const ledger = {
-  states: ['Created', 'Authorized', 'Captured', 'Settled'],
-  figures: [
-    { label: 'Payment volume', value: '$400M+' },
-    { label: 'Transactions', value: '800K+' },
-    { label: 'Success rate', value: '98.1%' },
-  ],
-  note: 'PublicSquare payments gateway, 2024–present',
-};
-
 export const experience = [
   {
     company: 'PublicSquare (PSQH)',

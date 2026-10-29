@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BsGithub, BsLinkedin, BsMoon, BsSun, BsDownload, BsEnvelope } from 'react-icons/bs';
-import { profile, ledger, experience, skills, projects, education } from './data';
+import { profile, experience, skills, projects, education } from './data';
 import portrait from './assets/profile.webp';
 
 const nav = [
@@ -52,42 +52,9 @@ function Header() {
   );
 }
 
-function Ledger() {
-  return (
-    <div className="rounded-xl border border-line bg-surface p-5 shadow-[0_1px_0_rgb(var(--line))] sm:p-6">
-      <p className="text-sm text-muted">Payment transfer intent</p>
-      <ol className="mt-4 flex items-center justify-between gap-1" aria-label="Payment lifecycle">
-        {ledger.states.map((s, i) => (
-          <li
-            key={s}
-            className="ledger-step flex flex-1 flex-col items-center gap-2 text-center"
-            style={{ animationDelay: `${300 + i * 380}ms` }}
-          >
-            <span className="flex w-full items-center">
-              <span className={`h-px flex-1 ${i === 0 ? 'opacity-0' : 'bg-line'}`} />
-              <span className="dot h-3 w-3 shrink-0 rounded-full" />
-              <span className={`h-px flex-1 ${i === ledger.states.length - 1 ? 'opacity-0' : 'bg-line'}`} />
-            </span>
-            <span className="text-xs font-medium sm:text-sm">{s}</span>
-          </li>
-        ))}
-      </ol>
-      <dl className="mt-6 divide-y divide-line border-t border-line">
-        {ledger.figures.map((f) => (
-          <div key={f.label} className="flex items-baseline justify-between py-3">
-            <dt className="text-muted">{f.label}</dt>
-            <dd className="tnum text-2xl font-bold tracking-tight sm:text-3xl">{f.value}</dd>
-          </div>
-        ))}
-      </dl>
-      <p className="mt-2 text-xs text-muted">{ledger.note}</p>
-    </div>
-  );
-}
-
 function Hero() {
   return (
-    <section id="top" className="mx-auto grid max-w-page gap-12 px-4 pb-20 pt-14 sm:px-6 md:pt-24 lg:grid-cols-[1.25fr_1fr] lg:items-center lg:gap-16">
+    <section id="top" className="mx-auto max-w-page px-4 pb-20 pt-14 sm:px-6 md:pb-28 md:pt-24">
       <div>
         <img
           src={portrait}
@@ -124,7 +91,6 @@ function Hero() {
           </a>
         </div>
       </div>
-      <Ledger />
     </section>
   );
 }

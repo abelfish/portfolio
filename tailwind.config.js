@@ -15,7 +15,6 @@ export default {
         muted: 'rgb(var(--muted) / <alpha-value>)',
         line: 'rgb(var(--line) / <alpha-value>)',
         signal: 'rgb(var(--signal) / <alpha-value>)',
-        settled: 'rgb(var(--settled) / <alpha-value>)',
       },
       maxWidth: {
         page: '72rem',
