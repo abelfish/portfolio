@@ -2,68 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 
-  It's generally better to use Tailwind's utility classes directly 
-  in JSX (e.g., bg-tertiary, dark:bg-primary) instead of these overrides.
-  However, adapting existing styles for dark mode.
-*/
-
-/* This was overriding .bg-white to be tertiary. Let's call it .bg-app-tertiary */
-.bg-app-tertiary {
-    background-color: #f4f0f1 !important; /* tertiary */
-}
-.dark .bg-app-tertiary {
-    background-color: #0b091e !important; /* dark */
+/* Palette is carried over from the original site: indigo ink #130f31, signal red #e94536 */
+:root {
+  --paper: 246 245 250;
+  --surface: 255 255 255;
+  --ink: 19 15 49;
+  --muted: 88 86 112;
+  --line: 222 220 232;
+  --signal: 214 58 44;
+  --settled: 22 128 90;
+  color-scheme: light;
 }
 
-.active {
-    color: #130f31 !important; /* primary */
-    font-weight: 700;
-}
-.dark .active {
-    /* Assuming active text should be prominent, secondary color might work well on dark bg */
-    /* Or use a light color like #f4f0f1 if secondary is too bright */
-    color: #e94536 !important; /* secondary */
-}
-
-.scrolled {
-    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
-}
-.dark .scrolled {
-    box-shadow: 0 2px 6px 0 rgba(255, 255, 255, 0.1); /* Lighter shadow for dark backgrounds */
+.dark {
+  --paper: 12 10 30;
+  --surface: 22 19 46;
+  --ink: 236 234 244;
+  --muted: 160 156 186;
+  --line: 48 44 82;
+  --signal: 240 98 84;
+  --settled: 74 196 146;
+  color-scheme: dark;
 }
 
 html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 75px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
-    color: #130f31; /* primary */
-    font-weight: 400;
-    overflow-x: hidden;
-    position: relative;
-    background-color: #f4f0f1 !important; /* tertiary */
-} 
-
-.dark body {
-    color: #f4f0f1; /* tertiary (light) for text */
-    background-color: #0b091e !important; /* dark for body background */
+  @apply bg-paper text-ink font-display antialiased;
+  font-optical-sizing: auto;
 }
 
-nav {
-    /* This might be overridden by component-specific styles like in Header.jsx */
-    background-color: #f4f0f1 !important; /* tertiary */
-    opacity: 0.95;
-} 
-
-.dark nav {
-    background-color: #0b091e !important; /* dark */
+:focus-visible {
+  outline: 2px solid rgb(var(--signal));
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
-/* #home {
-    background-image: url(../assets/images/profile-image.jpg);
-    background-size: 60%;
-    background-position: right;
-    background-repeat: no-repeat; */
-/* } */
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Hero ledger: each state settles in sequence once on load */
+.ledger-step {
+  opacity: 0.25;
+  animation: settle 0.35s ease-out forwards;
+}
+.ledger-step .dot {
+  background: rgb(var(--line));
+  animation: dot 0.35s ease-out forwards;
+  animation-delay: inherit;
+}
+@keyframes settle {
+  to { opacity: 1; }
+}
+@keyframes dot {
+  to { background: rgb(var(--settled)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .ledger-step,
+  .ledger-step .dot {
+    animation: none;
+    opacity: 1;
+  }
+  .ledger-step .dot { background: rgb(var(--settled)); }
+}
